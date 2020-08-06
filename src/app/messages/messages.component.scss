@@ -1,0 +1,40 @@
+h2 {
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+  & button{
+    cursor: pointer;
+    border: none;
+    border-left: 1px solid #888;border-radius: 4px;
+    padding: 6px 8px;
+    transition: .4s;
+    font-size: large;
+    background-color: white;
+    outline: none;
+    &:hover{
+      border-color: #4285F4;
+      color: #4285F4;
+      box-shadow: inset #4285F4 0 0 0 1px;
+    }
+    &:active{
+      color: white;
+      background-color: #4285F4;
+    }
+  }
+}
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 8px 16px;
+  margin: 16px 32px;
+  border-radius: 8px;
+  box-shadow: #AAA 0 0 5px;
+}
+.log{
+  padding: 12px;
+  background-color: #AAA;
+  border-radius: 4px;
+  box-shadow: #AAA 0 0 5px;
+}
