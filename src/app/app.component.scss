@@ -1,0 +1,27 @@
+.title-main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 8px 16px;
+  margin: 16px 32px;
+  border-radius: 8px;
+  box-shadow: #AAA 0 0 5px;
+  & h1{
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    margin: 8px 0;
+    color: #0d47a1;
+  }
+}
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 8px 16px;
+  margin: 16px 32px;
+  border-radius: 8px;
+  box-shadow: #AAA 0 0 5px;
+}

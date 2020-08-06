@@ -1,0 +1,16 @@
+<div class="card" *ngIf="selectedHero">
+  <div class="desc">
+    <span>id: {{selectedHero.id}}</span>
+    <span>name: {{selectedHero.name}}</span>
+    <span>name (maj): {{selectedHero.name | uppercase}}</span>
+  </div>
+  <div class="input" style="margin: 16px 0;">
+    <input [(ngModel)]="selectedHero.id" #heroIdMod class="active" (keyup)="heroIdMod.value !== '' ? heroIdMod.classList.add('active') : heroIdMod.classList.remove('active')"/>
+    <label>modifier id</label>
+  </div>
+  <div class="input" style="margin: 16px 0;">
+    <input [(ngModel)]="selectedHero.name" #heroNameMod class="active" (keyup)="heroNameMod.value !== '' ? heroNameMod.classList.add('active') : heroNameMod.classList.remove('active')"/>
+    <label>modifier nom</label>
+  </div>
+  <button [routerLink]="['/']" (click)="saveHeroes(selectedHero)">save</button>
+</div>

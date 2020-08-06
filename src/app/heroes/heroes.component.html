@@ -1,0 +1,18 @@
+<div class="heroes-main">
+  <h2>Heroes</h2>
+  <div class="input input-btn">
+    <input id="heroName" type="text" #heroName (keyup)="heroName.value !== '' ? heroName.classList.add('active') : heroName.classList.remove('active')"/>
+    <label for="heroName">Add hero</label>
+    <button (click)="add(heroName.value); heroName.value='';heroName.classList.remove('active')">ADD</button>
+  </div>
+  <ul class="heroes-list" *ngIf="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+      <div class="title"><span class="badge">{{hero.id}}</span> {{hero.name}}</div>
+      <div class="control">
+        <button [routerLink]="['/details/',hero.id]" >details</button>
+        <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
